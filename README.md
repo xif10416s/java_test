@@ -20,3 +20,21 @@
     *   客户端接受消息，解码还原时间后显示
     *   编码、解码主要是为了防止拆包粘包，保证数据读取正确，每次都是4个字节
 *   simplechat -- 简单聊天服务实现
+
+
+##  主流框架spring 集成
+### redis 集成
+####  redisson集成测试
+*   测试redis集群准备： docker pull 1nj0zren.mirror.aliyuncs.com/grokzen/redis-cluster
+*   初始化配置
+    *   org.redisson.spring.starter.RedissonAutoConfiguration
+        *   redisTemplate,StringRedisTemplate,RedissonClient 
+            *   默认没有初始化响应式客户端
+            *   org.fxi.test.java.springboot.redis.redisson.RedissonBeanConfig 手动初始化一下
+*   org.fxi.test.java.springboot.redis.redisson.RedissonTester -- 基础测试类
+    *   单节点模式/集群模式配置
+    *   https://github.com/redisson/redisson/wiki/%E7%9B%AE%E5%BD%95 参照配置
+    *   测试案例
+        *   基础用法
+        *   锁 --https://github.com/redisson/redisson/wiki/8.-distributed-locks-and-synchronizers
+*   org.fxi.test.java.springboot.redis.redisson.RedisTemplateTester

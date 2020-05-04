@@ -1,0 +1,12 @@
+#singleServerConfig:
+#  address: "redis://127.0.0.1:6379"
+#  password: null
+
+
+clusterServersConfig:
+  readMode: "SLAVE"
+  nodeAddresses:
+    - "redis://192.168.99.10:27002"
+    - "redis://192.168.99.10:27001"
+    - "redis://192.168.99.10:27000"
+  scanInterval: 1000
