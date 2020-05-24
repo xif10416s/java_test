@@ -3,18 +3,15 @@ package org.fxi.test.java.springboot.redis.redisson;
 import org.fxi.test.java.TestApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.redisson.Redisson;
 import org.redisson.RedissonMultiLock;
 import org.redisson.RedissonRedLock;
 import org.redisson.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import reactor.core.publisher.Mono;
 
-import javax.annotation.Resource;
 import java.io.Serializable;
 import java.util.concurrent.TimeUnit;
 

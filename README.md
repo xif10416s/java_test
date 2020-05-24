@@ -38,3 +38,9 @@
         *   基础用法
         *   锁 --https://github.com/redisson/redisson/wiki/8.-distributed-locks-and-synchronizers
 *   org.fxi.test.java.springboot.redis.redisson.RedisTemplateTester
+
+####  spring_kafka (kafka2.5)集成测试
+*   测试环境准备：本地kafka2.5源码启动 ||  docker kafka ||  直接下载kafka本地启动
+*   org.fxi.test.java.springboot.kafka.KafkaBasicTester : 基础 producer 与 consumer测试
+    *   问题：kafkaListener 的concurrency 数量配置大于 topic的partition的时候实际还是启动了concurrency数量的consumer
+*   org.fxi.test.java.springboot.kafka.KafkaTransactionTester : kafka事务测试，只需要配置producer的transactionIdPrefix，开启事务功能
