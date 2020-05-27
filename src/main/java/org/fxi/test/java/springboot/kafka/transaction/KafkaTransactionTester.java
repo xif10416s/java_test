@@ -1,4 +1,4 @@
-package org.fxi.test.java.springboot.kafka;
+package org.fxi.test.java.springboot.kafka.transaction;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.redisson.spring.starter.RedissonAutoConfiguration;
@@ -8,17 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.kafka.core.DefaultKafkaProducerFactory;
-import org.springframework.kafka.core.KafkaOperations;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.kafka.core.ProducerFactory;
-import org.springframework.kafka.transaction.KafkaTransactionManager;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication(scanBasePackages ="org.fxi.test.java.springboot.kafka" , exclude = RedissonAutoConfiguration.class)
 public class KafkaTransactionTester implements CommandLineRunner {

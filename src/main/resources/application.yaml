@@ -7,7 +7,7 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
     producer:
-      transactionIdPrefix: g1_trnx
+#      transactionIdPrefix: g1_trnx
       client-id: ttt
     consumer:
       groupId: myGroup
