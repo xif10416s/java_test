@@ -29,7 +29,7 @@ public class KafkaBatchTester implements CommandLineRunner {
 
     public static Logger logger = LoggerFactory.getLogger(KafkaBatchTester.class);
 
-    private final CountDownLatch latch = new CountDownLatch(3);
+    private final CountDownLatch latch = new CountDownLatch(2);
 
     @Autowired
     private KafkaTemplate kafkaTemplate;

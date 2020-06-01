@@ -7,7 +7,12 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
     producer:
-#      transactionIdPrefix: g1_trnx
+      transactionIdPrefix: g1_trnx
       client-id: ttt
     consumer:
       groupId: myGroup
+  datasource:
+    url: jdbc:mysql://192.168.99.100/test?serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
